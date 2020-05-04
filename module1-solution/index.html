@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="ATApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+    body {
+      position: relative;
+      background: #89bce0;
+      font-size: 25px;
+      color: #222;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+    }
+  
+</style>
+
+    <title>AngulaJS Assignment 1</title>
+  </head>
+  <h1 align="center">AngularJS Assignment 1</h1>
+  <body>
+    <div ng-controller="ATController" align="center">
+      Enter Items: <input type="text" ng-model="count" class="ipbox">
+      <br/><br/><button ng-click="checkIfToomuch(count)">Check if Too much!</button>
+
+       <br><br/>
+       <div ng-if="result=='Enjoy!' || result=='Too much!'"><style> input {border-color: green;}</style><p style="color:green">{{result}}</p></div>
+       <div ng-if="result=='Please enter data first'"><style>input{border-color: red;}</style><p style="color:red">{{result}}</p></div>
+    </div>
+
+  </body>
+</html>
